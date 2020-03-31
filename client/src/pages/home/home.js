@@ -8,7 +8,7 @@ class Home extends Component {
       <div>
         <div>
             
-            <h1 style={{ fontFamily: 'Simonetta'}} className="introText">Coming Soon</h1>
+            <h1 className="introText">Coming Soon</h1>
           {/* <Jumbotron>
             <h1 className="display-3">Kealoha Ogilvie</h1>
             <p className="lead">
