@@ -1,3 +1,8 @@
 .logoImg {
     max-width: 200px;
 }
+
+.mainNav {
+    padding: 10px;
+    box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
+}
