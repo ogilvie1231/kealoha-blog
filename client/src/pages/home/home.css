@@ -9,19 +9,19 @@ body {
 }
 
 .homeDisp {
-  max-width: 90%;
+  max-width: 80%;
   margin: auto;
   background-color: rgb(250, 249, 242) !important;
   padding: 10px;
+  padding-top: 5%;
   box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
 }
 
 .pageImg {
-    padding-top: 5%;
-    height: 100%;
-
-    /* Center and scale the image nicely */
+    width: 80%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
+    margin-bottom: 5%;
 }

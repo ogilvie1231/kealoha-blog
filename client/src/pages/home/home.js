@@ -10,7 +10,7 @@ class Home extends Component {
             <div>
               <img className='pageImg' src="images/home1.jpg"></img>
             </div>
-            <h1 className="introText">Coming Soon</h1>
+            {/* <h1 className="introText">Coming Soon</h1> */}
           <Jumbotron className='homeDisp'>
             <h1 className="display-3">Kealoha Ogilvie</h1>
             <p className="lead">
