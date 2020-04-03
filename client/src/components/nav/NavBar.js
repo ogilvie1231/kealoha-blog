@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -12,54 +12,71 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText
-} from 'reactstrap';
+} from "reactstrap";
 
-import './NavBar.css'
+import "./NavBar.css";
 
-const NavBar = (props) => {
+import { useAuth0 } from "../../react-auth0-spa";
+
+const NavBar = props => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar className='mainNav' color="light" light expand="md">
-        <NavbarBrand href="/"><img className="logoImg" src="../images/kealohaLogo.png"></img> </NavbarBrand>
+      <Navbar className="mainNav" color="light" light expand="md">
+        <NavbarBrand href="/">
+          <img className="logoImg" src="../images/kealohaLogo.png"></img>{" "}
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
+
             <NavItem>
               <NavLink href="/components/">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">DIYs</NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap">
+                DIYs
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Videos</NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap">
+                Videos
+              </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Trips
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  Zion
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
+                <DropdownItem>Zion</DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
+                <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem>
+            {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+              {/* <NavLink href="/components/">About</NavLink> */}
+            </NavItem>
+            <NavItem className="left">
+            <NavLink href="/post">post</NavLink>
+            </NavItem>
+            
+
           </Nav>
           <NavbarText></NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};
 
 export default NavBar;
+
