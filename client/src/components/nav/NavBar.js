@@ -65,8 +65,8 @@ const NavBar = props => {
             {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
               {/* <NavLink href="/components/">About</NavLink> */}
             </NavItem>
-            <NavItem className="left">
-            <NavLink href="/post">post</NavLink>
+            <NavItem>
+            <NavLink href="/post">Post</NavLink>
             </NavItem>
             
 
