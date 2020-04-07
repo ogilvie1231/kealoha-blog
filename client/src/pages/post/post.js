@@ -29,10 +29,10 @@ class Post extends Component {
     console.log("newContent: ", newContent);
 
     API.saveOne({
-      newContent,
+      newContent
     })
       .then((res) => {
-        console.log("res.data: ", res.data);
+        // console.log("res.data: ", res.data);
         window.location.reload();
       })
       .catch((error) => {
