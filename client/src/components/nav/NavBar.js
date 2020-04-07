@@ -38,15 +38,15 @@ const NavBar = props => {
           <Nav className="mr-auto" navbar>
 
             <NavItem>
-              <NavLink href="/components/">About</NavLink>
+              <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink href="/diy">
                 DIYs
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink href="/">
                 Videos
               </NavLink>
             </NavItem>

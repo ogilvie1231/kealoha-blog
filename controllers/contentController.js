@@ -21,12 +21,12 @@ module.exports = {
         .catch(err => res.status(422).json(err))
     },
     create: function(req, res) {
-        alert('You Made It')
-        // console.log('req.body.newContent: ', req.body.newContent)
-        // db.ContentModel
-        // .create(req.body.newContent)
-        // .then(dbModel => res.json(dbModel))
-        // .catch(err => res.status(422).json(err))
+        // alert('You Made It')
+        console.log('req.body.newContent: ', req.body.newContent)
+        db.ContentModel
+        .create(req.body.newContent)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
     },
     update: function(req, res) {
         db.ContentModel

@@ -1,0 +1,27 @@
+body {
+    background-color: white !important;
+  }
+  
+  .introText {
+    font-family: "Lora", serif;
+    font-size: 1000%;
+    padding: 5%;
+  }
+  
+  .homeDisp {
+    max-width: 80%;
+    margin: auto;
+    background-color: rgb(250, 249, 242) !important;
+    padding: 10px;
+    padding-top: 5%;
+    box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
+  }
+  
+  .pageImg {
+      width: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
+      margin-bottom: 5%;
+  }
