@@ -31,7 +31,7 @@ const NavBar = props => {
     <div>
       <Navbar className="mainNav" color="light" light expand="md">
         <NavbarBrand href="/">
-          <img className="logoImg" src="../images/kealohaLogo.png"></img>{" "}
+          <img className="logoImg" src="../images/kealohaLogo.png" alt='logo'></img>{" "}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
