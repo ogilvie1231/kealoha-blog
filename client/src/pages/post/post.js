@@ -5,7 +5,7 @@ import API from "../../utils/API";
 
 class Post extends Component {
   state = {
-    category: "",
+    category: "Blog",
     title: "",
     text: "",
     file: "",
@@ -32,7 +32,6 @@ class Post extends Component {
       newContent
     })
       .then((res) => {
-        // console.log("res.data: ", res.data);
         window.location.reload();
       })
       .catch((error) => {
@@ -47,7 +46,7 @@ class Post extends Component {
           <Jumbotron className="postForm">
             <Form>
               <FormGroup>
-                <Label for="exampleSelectMulti">Select Multiple</Label>
+                <Label for="exampleSelectMulti">Select Category</Label>
                 <Input
                   type="select"
                   name="category"

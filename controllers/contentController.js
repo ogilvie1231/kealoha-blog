@@ -21,8 +21,6 @@ module.exports = {
         .catch(err => res.status(422).json(err))
     },
     create: function(req, res) {
-        // alert('You Made It')
-        console.log('req.body.newContent: ', req.body.newContent)
         db.ContentModel
         .create(req.body.newContent)
         .then(dbModel => res.json(dbModel))
@@ -37,7 +35,7 @@ module.exports = {
     remove: function(req, res) {
         db.ContentModel
         .findById({_id: req.params.id})
-        .then(dbModel => dbModel.remove())
+        .then(dbModel => dbModel.deleteOne())
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err))
     }

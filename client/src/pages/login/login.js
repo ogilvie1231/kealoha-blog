@@ -9,7 +9,7 @@ class Login extends Component {
       <div>
         <div>
             <div>
-              <img className='pageImg' src="images/login.jpg"></img>
+              <img className='pageImg' src="images/login.jpg" alt='login'></img>
             </div>
             {/* <h1 className="introText">Coming Soon</h1> */}
           <Jumbotron className='homeDisp'>

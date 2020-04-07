@@ -12,8 +12,7 @@ export default {
     return axios.delete("/api/" + id);
   },
   saveOne: function (data) {
-    // console.log("API.js saveOne data: ", data);
-    return axios.post("/api/newpost", data)
+    return axios.post("/api/", data)
     .then((response) => {
       console.log('response: ', response);
     }, (error) => {
