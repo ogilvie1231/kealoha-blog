@@ -31,12 +31,12 @@ class Post extends Component {
     API.saveOne({
       newContent
     })
-      .then((res) => {
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.log("error: ", error);
-      });
+      // .then((res) => {
+      //   // window.location.reload();
+      // })
+      // .catch((error) => {
+      //   console.log("API.saveOne post.js error: ", error);
+      // });
   };
 
   render() {
