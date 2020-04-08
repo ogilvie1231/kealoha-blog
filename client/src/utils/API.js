@@ -13,6 +13,6 @@ export default {
   },
   saveOne: function (data) {
     // console.log('API.js saveOne data: ', data)
-    return axios.post("/api", data)
+    return axios.post("http://localhost:3001/api", data)
   },
 };
