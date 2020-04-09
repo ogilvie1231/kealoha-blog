@@ -31,12 +31,12 @@ class Post extends Component {
     API.saveOne({
       newContent
     })
-      // .then((res) => {
-      //   // window.location.reload();
-      // })
-      // .catch((error) => {
-      //   console.log("API.saveOne post.js error: ", error);
-      // });
+      .then((res) => {
+        // window.location.reload();
+      })
+      .catch((error) => {
+        console.log("API.saveOne post.js error: ", error);
+      });
   };
 
   render() {
@@ -59,47 +59,6 @@ class Post extends Component {
                   <option>Trips</option>
                 </Input>
               </FormGroup>
-
-              {/* <FormGroup
-                tag="fieldset"
-                onChange={this.handleInputChange}
-                value={this.state.category}
-              >
-                <legend>Radio Buttons</legend>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="category"
-                      // onChange={this.handleInputChange}
-                      // value={this.state.category}
-                    />{" "}
-                    Blog
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="category"
-                      // onChange={this.handleInputChange}
-                      // value={this.state.category}
-                    />{" "}
-                    DIY
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="radio"
-                      name="category"
-                      // onChange={this.handleInputChange}
-                      // value={this.state.category}
-                    />{" "}
-                    Videos
-                  </Label>
-                </FormGroup>
-              </FormGroup> */}
 
               <FormGroup>
                 <Label for="exampleTitle">Title</Label>
@@ -139,15 +98,7 @@ class Post extends Component {
             </Form>
           </Jumbotron>
 
-          <Jumbotron className="homeDisp">
-            <h1 className="display-3">Kealoha Ogilvie</h1>
-            <p className="lead">Follow along with our adventures!</p>
-            <hr className="my-2" />
-            <p>Below are my exploits</p>
-            <p className="lead">
-              <Button color="primary">Learn More</Button>
-            </p>
-          </Jumbotron>
+         
         </div>
       </div>
     );

@@ -41,12 +41,12 @@ const NavBar = props => {
               <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/diy">
+              <NavLink href="/diys">
                 DIYs
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">
+              <NavLink href="/videos">
                 Videos
               </NavLink>
             </NavItem>

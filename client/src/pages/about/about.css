@@ -4,8 +4,20 @@ body {
   
   .introText {
     font-family: "Lora", serif;
-    font-size: 1000%;
+    /* font-size: 1000%; */
     padding: 5%;
+  }
+
+  hr {
+    width: 40%;
+    height: 0px;
+    border: none;
+    border-top: 2px solid rgb(156, 156, 156) !important;
+  }
+
+  .aboutMe {
+    width: 80%;
+    margin: auto;
   }
   
   .homeDisp {
