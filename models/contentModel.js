@@ -5,6 +5,7 @@ const contentSchema = new Schema({
   category: { type: String },
   title: { type: String },
   text: { type: String },
+  subject: { type: String },
   file: { type: String }
 });
 

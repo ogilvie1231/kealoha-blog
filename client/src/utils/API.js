@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   getAll: function (category) {
-    return axios.get("/api/" + category);
+    return axios.get("http://localhost:3001/api/" + category);
   },
 
   getOne: function (category, id) {

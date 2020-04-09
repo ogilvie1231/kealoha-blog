@@ -9,6 +9,7 @@ class Post extends Component {
     title: "",
     text: "",
     file: "",
+    subject: ""
   };
 
   handleInputChange = (event) => {
@@ -72,7 +73,18 @@ class Post extends Component {
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleText">Text Area</Label>
+                <Label for="exampleText">Subject</Label>
+                <Input
+                  type="textarea"
+                  name="subject"
+                  id="exampleText"
+                  onChange={this.handleInputChange}
+                  value={this.state.subject}
+                  placeholder="Brief subject line"
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleText">Blog Post</Label>
                 <Input
                   type="textarea"
                   name="text"

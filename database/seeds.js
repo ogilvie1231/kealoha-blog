@@ -14,9 +14,10 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true,
 
 const Seed = [
   {
-    category: "diy",
-    title: "testlink",
-    text:"ajax",
+    category: "test",
+    title: "test title",
+    text:"test text",
+    subject: "test subject",
     file: "test summary"
   }
 ];
