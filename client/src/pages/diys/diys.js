@@ -1,21 +1,56 @@
-import React, { Component } from 'react';
-import CardCom from '../../components/Card/Card';
-import './diys.css';
+import React, { Component } from "react";
+import CardCom from "../../components/Card/Card";
+import "./diys.css";
+import API from "../../utils/API";
+import images from '../../images/kealohaPH.jpg'
+
+let DefaultImg = images
+console.log('DefaultImg ', DefaultImg)
 
 class Diy extends Component {
-    render() {
-        return (
-            <div>
-                <div>
-                    <h2>DIYs</h2>
-                </div>
-<div>
-    <CardCom />
-</div>
+  state = {
+    diys: [],
+  };
 
-            </div>
-        )
-    }
+  componentDidMount() {
+    this.loadAll();
+  }
+
+  loadAll = () => {
+    API.getAll("DIY")
+      .then((res) => {
+        this.setState({
+          diys: res.data,
+        });
+      })
+      .catch((error) => {
+        console.log("diys loadAll error: ", error);
+      });
+  };
+  render() {
+    return (
+      <div>
+        <div>
+          <h2>DIYs</h2>
+        </div>
+        <div>
+          {this.state.diys.length ? (
+            this.state.diys.map((info) => (
+              <CardCom
+                className="videoCard"
+                key={info._id}
+                title={info.title}
+                subject={info.subject}
+                src={DefaultImg}
+              />
+            ))
+          ) : (
+            <h3>No content at this time</h3>
+          )}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Diy;
