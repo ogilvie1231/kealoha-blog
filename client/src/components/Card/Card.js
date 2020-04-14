@@ -9,27 +9,20 @@ import {
   Button,
 } from "reactstrap";
 import "./card.css";
-import images from '../../images/kealohaPH.jpg'
+import images from "../../images/kealohaPH.jpg";
 
-let DefaultImg = images
+let DefaultImg = images;
 
-const CardCom = (
-  props
-  //   = {
-  //   title,
-  //   _id,
-  //   file: '../../../public/images/kealohaPH.jpg',
-
-  //   subject,
-  //   link
-
-  // }
-) => {
-  // props.file = props.file ? props.file : "http://www.fillmurray.com/200/300";
+const CardCom = (props) => {
   return (
     <div>
       <Card className="videoCard" key={props._id}>
-        <CardImg top width="100%" src={props.file || DefaultImg} alt={props.title} />
+        <CardImg
+          top
+          width="100%"
+          src={props.file || DefaultImg}
+          alt={props.title}
+        />
         <CardBody>
           <CardTitle>
             <h2>{props.title}</h2>

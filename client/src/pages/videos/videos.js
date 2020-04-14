@@ -1,13 +1,4 @@
 import React, { Component } from "react";
-// import {
-//   Card,
-//   CardImg,
-//   CardText,
-//   CardBody,
-//   CardTitle,
-//   CardSubtitle,
-//   Button,
-// } from "reactstrap";
 import CardCom from "../../components/Card/Card";
 import "./videos.css";
 import API from "../../utils/API";
@@ -31,6 +22,7 @@ class VideoPage extends Component {
         this.setState({
           videos: res.data,
         });
+        
       })
       .catch((error) => {
         console.log("Videos loadAll error: ", error);

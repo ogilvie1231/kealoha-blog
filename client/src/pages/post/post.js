@@ -33,7 +33,7 @@ class Post extends Component {
       newContent
     })
       .then((res) => {
-        // window.location.reload();
+        window.location.reload();
       })
       .catch((error) => {
         console.log("API.saveOne post.js error: ", error);
