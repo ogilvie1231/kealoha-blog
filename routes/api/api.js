@@ -10,7 +10,7 @@ router.route("/")
 // Matches with "/api/books/:id"
 router
   .route("/:id")
-  .get(contentController.findById)
+  .get(contentController.findAll)
   .put(contentController.update)
   .delete(contentController.remove);
 

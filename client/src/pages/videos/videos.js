@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
+// import {
+//   Card,
+//   CardImg,
+//   CardText,
+//   CardBody,
+//   CardTitle,
+//   CardSubtitle,
+//   Button,
+// } from "reactstrap";
 import CardCom from "../../components/Card/Card";
 import "./videos.css";
 import API from "../../utils/API";
+import images from '../../images/kealohaPH.jpg'
+
+let DefaultImg = images
+console.log('DefaultImg ', DefaultImg)
 
 class VideoPage extends Component {
   state = {
@@ -41,28 +45,17 @@ class VideoPage extends Component {
           <hr />
         </div>
         <div>
+        </div>
+        <div>
           {this.state.videos.length ? (
             this.state.videos.map((info) => (
-              <Card className="videoCard">
-                <CardImg top width="100%" src={info.file} alt={info.title} />
-                <CardBody>
-                  <CardTitle>
-                    <h2>{info.title}</h2>
-                  </CardTitle>
-                  <CardSubtitle>
-                    <p>{info.subject}</p>
-                  </CardSubtitle>
-                  <CardText></CardText>
-                  <Button
-                    href={info.link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    variant="primary"
-                  >
-                    Read More
-                  </Button>
-                </CardBody>
-              </Card>
+              <CardCom
+                className="videoCard"
+                key={info._id}
+                title={info.title}
+                subject={info.subject}
+                src={DefaultImg}
+              />
             ))
           ) : (
             <h3>No content at this time</h3>
