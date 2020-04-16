@@ -32,6 +32,7 @@ class Diy extends Component {
       <div>
         <div>
           <h2>DIYs</h2>
+          <hr />
         </div>
         <div>
           {this.state.diys.length ? (
@@ -41,7 +42,8 @@ class Diy extends Component {
                 key={info._id}
                 title={info.title}
                 subject={info.subject}
-                src={DefaultImg}
+                text={info.text}
+                src={info.file || DefaultImg}
               />
             ))
           ) : (

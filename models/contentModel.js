@@ -6,7 +6,7 @@ const contentSchema = new Schema({
   title: { type: String },
   text: { type: String },
   subject: { type: String },
-  file: { type: String }
+  file: { data: Buffer, contentType: String }
 });
 
 const ContentModel = mongoose.model("ContentModel", contentSchema);
