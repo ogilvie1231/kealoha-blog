@@ -11,7 +11,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import NavBar from "./components/nav/NavBar";
 import Profile from './components/Profile';
 import Footer from './components/Footer/footer';
-// import { useAuth0 } from "./react-auth0-spa";
+import { useAuth0 } from "./react-auth0-spa";
 import './App.css';
 
 
@@ -26,7 +26,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/post" component={Post} />
+          <PrivateRoute exact path="/post" component={Post} />
           <Route exact path="/about" component={About} />
           <Route exact path="/diys" component={Diy} />
           <Route exact path="/videos" component={Videos} />

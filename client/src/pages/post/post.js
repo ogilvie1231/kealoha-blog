@@ -9,7 +9,7 @@ class Post extends Component {
     title: "",
     text: "",
     file: "",
-    subject: ""
+    subject: "",
   };
 
   handleInputChange = (event) => {
@@ -30,7 +30,7 @@ class Post extends Component {
     console.log("newContent: ", newContent);
 
     API.saveOne({
-      newContent
+      newContent,
     })
       .then((res) => {
         window.location.reload();
@@ -42,6 +42,7 @@ class Post extends Component {
 
   render() {
     return (
+      
       <div>
         <div className="container">
           <Jumbotron className="postForm">
@@ -86,6 +87,7 @@ class Post extends Component {
               <FormGroup>
                 <Label for="exampleText">Blog Post</Label>
                 <Input
+                  className="formText"
                   type="textarea"
                   name="text"
                   id="exampleText"
@@ -109,8 +111,6 @@ class Post extends Component {
               <Button onClick={this.handleFormSubmit}>Submit</Button>
             </Form>
           </Jumbotron>
-
-         
         </div>
       </div>
     );

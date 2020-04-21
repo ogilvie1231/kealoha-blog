@@ -14,6 +14,7 @@ body {
   background-color: rgb(250, 249, 242) !important;
   padding: 10px;
   padding-top: 5%;
+  margin-bottom: 50%;
   box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
 }
 
