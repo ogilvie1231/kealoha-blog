@@ -7,7 +7,7 @@ import images from '../../images/kealohaPH.jpg'
 let DefaultImg = images
 console.log('DefaultImg ', DefaultImg)
 
-class Trips extends Component {
+class TripsP extends Component {
   state = {
     trips: [],
   };
@@ -58,4 +58,4 @@ class Trips extends Component {
   }
 }
 
-export default Trips;
+export default TripsP;

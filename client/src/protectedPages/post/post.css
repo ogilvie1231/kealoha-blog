@@ -1,0 +1,15 @@
+.container {
+  margin-top: 3%;
+  width: 90%;
+}
+
+.postForm {
+  background-color:  #f3f3f3 !important;
+  margin: auto;
+  width: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
+  margin-bottom: 5%;
+}

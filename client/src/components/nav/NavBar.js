@@ -48,17 +48,9 @@ const NavBar = () => {
               <NavItem>
                 <NavLink href="/videos">Videos</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Trips
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Zion</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/trips">Trips</NavLink>
+              </NavItem>
 
               {/* <NavItem >
                 <NavLink onClick={() => loginWithRedirect({})}>Log in</NavLink>
@@ -71,7 +63,7 @@ const NavBar = () => {
 
       {isAuthenticated && (
         <Navbar className="mainNav" color="light" light expand="md">
-          <NavbarBrand href="/">
+          <NavbarBrand href="/p">
             <img
               className="logoImg"
               src="../images/kealohaLogo.png"
@@ -85,22 +77,14 @@ const NavBar = () => {
                 <NavLink href="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/diys">DIYs</NavLink>
+                <NavLink href="/diysp">DIYs</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/videos">Videos</NavLink>
+                <NavLink href="/videosp">Videos</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Trips
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Zion</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>{" "}
+              <NavItem>
+                <NavLink href="/tripsp">Trips</NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink href="/post">Post</NavLink>
               </NavItem>

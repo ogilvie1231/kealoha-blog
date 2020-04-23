@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import CardCom from "../../components/Card/Card";
-import "./trips.css";
+import "./videos.css";
 import API from "../../utils/API";
 import images from '../../images/kealohaPH.jpg'
 
 let DefaultImg = images
 console.log('DefaultImg ', DefaultImg)
 
-class Trips extends Component {
+class VideoPageP extends Component {
   state = {
-    trips: [],
+    videos: [],
   };
 
   componentDidMount() {
@@ -17,15 +17,15 @@ class Trips extends Component {
   }
 
   loadAll = () => {
-    API.getAll("Trips")
+    API.getAll("Videos")
       .then((res) => {
         this.setState({
-          trips: res.data,
+          videos: res.data,
         });
         
       })
       .catch((error) => {
-        console.log("Trips loadAll error: ", error);
+        console.log("Videos loadAll error: ", error);
       });
   };
 
@@ -33,14 +33,14 @@ class Trips extends Component {
     return (
       <div>
         <div>
-          <h2>Trips</h2>
+          <h2>Videos</h2>
           <hr />
         </div>
         <div>
         </div>
         <div>
-          {this.state.trips.length ? (
-            this.state.trips.map((info) => (
+          {this.state.videos.length ? (
+            this.state.videos.map((info) => (
               <CardCom
                 className="videoCard"
                 key={info._id}
@@ -58,4 +58,4 @@ class Trips extends Component {
   }
 }
 
-export default Trips;
+export default VideoPageP;

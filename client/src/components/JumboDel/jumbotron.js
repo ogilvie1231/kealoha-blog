@@ -2,7 +2,7 @@ import React from "react";
 import { Jumbotron, Button } from "reactstrap";
 import "./jumbotron.css";
 
-const Jumbo = (props) => {
+const JumboDel = (props) => {
   return (
     <div>
       <Jumbotron className="homeDisp" key={props._id}>
@@ -11,13 +11,13 @@ const Jumbo = (props) => {
         <hr className="my-2" />
         <p className="blogText">{props.text}</p>
         <p className="lead">
-          {/* <Button color="primary">{props.delete}</Button> */}
+          <Button color="primary">Delete</Button>
         </p>
       </Jumbotron>
     </div>
   );
 };
 
-export default Jumbo;
+export default JumboDel;
 
 
