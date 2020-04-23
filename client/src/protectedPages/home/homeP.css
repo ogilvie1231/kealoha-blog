@@ -11,11 +11,9 @@ body {
 .JumboDisp {
   max-width: 80%;
   margin: auto;
-  /* background-color: rgb(250, 249, 242) !important; */
   background-color: rgb(250, 249, 242) !important;
   padding: 10px;
   padding-top: 5%;
-  padding-bottom: 500%;
   box-shadow: 3px 0px 10px #d1d1d1, -3px 0px 10px #d1d1d1;
 }
 
