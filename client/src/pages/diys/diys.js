@@ -45,6 +45,9 @@ class Diy extends Component {
                 text={info.text}
                 src={info.file || DefaultImg}
               />
+
+              
+
             ))
           ) : (
             <h3>No content at this time</h3>
