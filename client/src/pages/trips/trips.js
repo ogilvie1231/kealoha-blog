@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import CardCom from "../../components/Card/Card";
 import "./trips.css";
 import API from "../../utils/API";
-import images from '../../images/kealohaPH.jpg'
+import images from "../../images/kealohaPH.jpg";
 
-let DefaultImg = images
-console.log('DefaultImg ', DefaultImg)
+let DefaultImg = images;
+console.log("DefaultImg ", DefaultImg);
 
 class Trips extends Component {
   state = {
@@ -22,7 +22,6 @@ class Trips extends Component {
         this.setState({
           trips: res.data,
         });
-        
       })
       .catch((error) => {
         console.log("Trips loadAll error: ", error);
@@ -36,18 +35,20 @@ class Trips extends Component {
           <h2>Trips</h2>
           <hr />
         </div>
-        <div>
-        </div>
+        <div></div>
         <div>
           {this.state.trips.length ? (
             this.state.trips.map((info) => (
-              <CardCom
-                className="videoCard"
-                key={info._id}
-                title={info.title}
-                subject={info.subject}
-                src={DefaultImg}
-              />
+              <div>
+                <CardCom
+                  className="videoCard"
+                  key={info._id}
+                  title={info.title}
+                  subject={info.subject}
+                  src={DefaultImg}
+                />
+                <br />
+              </div>
             ))
           ) : (
             <h3>No content at this time</h3>

@@ -41,6 +41,7 @@ class VideoPage extends Component {
         <div>
           {this.state.videos.length ? (
             this.state.videos.map((info) => (
+              <div>
               <CardCom
                 className="videoCard"
                 key={info._id}
@@ -48,6 +49,8 @@ class VideoPage extends Component {
                 subject={info.subject}
                 src={DefaultImg}
               />
+              <br />
+              </div>
             ))
           ) : (
             <h3>No content at this time</h3>

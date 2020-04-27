@@ -37,6 +37,7 @@ class Diy extends Component {
         <div>
           {this.state.diys.length ? (
             this.state.diys.map((info) => (
+              <div>
               <CardCom
                 className="videoCard"
                 key={info._id}
@@ -45,8 +46,8 @@ class Diy extends Component {
                 text={info.text}
                 src={info.file || DefaultImg}
               />
-
-              
+              <br />
+              </div>
 
             ))
           ) : (

@@ -38,12 +38,15 @@ class Home extends Component {
 
             {this.state.blog.length ? (
               this.state.blog.map((info) => (
+                <div>
                 <Jumbo
                   key={info._id}
                   title={info.title}
                   subject={info.subject}
                   text={info.text}
                 />
+                <br />
+                </div>
               ))
             ) : (
               <div>
