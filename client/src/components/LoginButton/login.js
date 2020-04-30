@@ -23,7 +23,7 @@ const LoginButton = () => {
         variant="outline-success"
         onClick={() => logout()}
       >
-        Log in
+        Log out
       </Button>}
 
       
