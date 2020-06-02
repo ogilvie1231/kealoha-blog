@@ -54,17 +54,29 @@ const NavBar = () => {
               <NavItem>
                 <NavLink href="/trips">Photos</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/trips">
+            
+
+              {/* <NavItem >
+                <NavLink onClick={() => loginWithRedirect({})}>Log in</NavLink>
+              </NavItem> */}
+            </Nav>
+            <Nav>
+            <Nav>
+            <NavItem className="mr-auto">
+                <NavLink target="_blank" href="https://www.instagram.com/kealohaogilvie/?hl=en">
                   <div>
                     <img className="social" src="./instagram.png" alt="ig"></img>
                   </div>
                 </NavLink>
               </NavItem>
-
-              {/* <NavItem >
-                <NavLink onClick={() => loginWithRedirect({})}>Log in</NavLink>
-              </NavItem> */}
+              <NavItem className="mr-auto">
+                <NavLink target="_blank" href="https://www.youtube.com/playlist?list=UUyv942D2daFnf1g5XgKtlMA">
+                  <div>
+                    <img className="social" src="./youtube.png" alt="youtube"></img>
+                  </div>
+                </NavLink>
+              </NavItem>
+            </Nav>
             </Nav>
             <NavbarText></NavbarText>
           </Collapse>

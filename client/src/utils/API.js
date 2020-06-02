@@ -20,7 +20,7 @@ export default {
     return axios.delete("http://localhost:3001/api/" + id);
   },
   saveOne: function (data) {
-    // console.log('API.js saveOne data: ', data)
+    console.log('API.js saveOne data: ', data)
     return axios.post("http://localhost:3001/api", data)
   },
 };
