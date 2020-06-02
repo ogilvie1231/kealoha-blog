@@ -4,6 +4,7 @@ import "../post/post.css";
 import API from "../../utils/API";
 import GetQuote from "../../components/Quote/Quote"
 
+
 class Post extends Component {
   state = {
     category: "Blog",
@@ -19,14 +20,12 @@ class Post extends Component {
     this.setState({
       [name]: value,
     });
-    // console.log("handleInputChange value: ", value);
-    // console.log("handleInputChange name: ", name);
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { category, title, text, file } = this.state;
-    const newContent = { category, title, text, file };
+    const { category, title, text, file, subject } = this.state;
+    const newContent = { category, title, text, file, subject };
 
     console.log("newContent: ", newContent);
 
@@ -50,7 +49,7 @@ class Post extends Component {
             {/* <GetQuote /> */}
             <Form>
               <FormGroup>
-                <Label for="exampleSelectMulti">Select Category</Label>
+                <Label for="SelectMulti">Select Category</Label>
                 <Input
                   type="select"
                   name="category"
@@ -65,50 +64,62 @@ class Post extends Component {
               </FormGroup>
 
               <FormGroup>
-                <Label for="exampleTitle">Title</Label>
+                <Label for="Title">Title</Label>
                 <Input
                   type="titlearea"
                   name="title"
-                  id="exampleTitle"
+                  id="Title"
                   onChange={this.handleInputChange}
                   value={this.state.title}
                   placeholder="Title"
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleText">Subject</Label>
+                <Label for="Text">Subject</Label>
                 <Input
                   type="textarea"
                   name="subject"
-                  id="exampleText"
+                  id="Text"
                   onChange={this.handleInputChange}
                   value={this.state.subject}
                   placeholder="Brief subject line"
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleText">Blog Post</Label>
+                <Label for="Text">Blog Post</Label>
                 <Input
+
                   className="formText"
                   type="textarea"
                   name="text"
-                  id="exampleText"
+                  id="Text"
                   onChange={this.handleInputChange}
                   value={this.state.text}
                   placeholder="Enter your blog post here!"
                 />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleFile">File</Label>
+                <Label for="File">File</Label>
                 <Input
-                  type="file"
+                  type="textarea"
                   name="file"
-                  id="exampleFile"
+                  id="File"
                   onChange={this.handleInputChange}
                   value={this.state.file}
                   placeholder="Enter your blog post here!"
                 />
               </FormGroup>
+              {/* <FormGroup>
+                <Label for="File">File</Label>
+                <Input
+                  type="file"
+                  name="file"
+                  id="File"
+                  onChange={this.handleInputChange}
+                  value={this.state.file}
+                  placeholder="Enter your blog post here!"
+                />
+              </FormGroup> */}
 
               <Button onClick={this.handleFormSubmit}>Submit</Button>
             </Form>
