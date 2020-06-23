@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, Jumbotron } from "reactstrap";
 import "../post/post.css";
 import API from "../../utils/API";
+import TinyEditor from '../../components/TinyEditor/TinyEditor'
 import GetQuote from "../../components/Quote/Quote"
+import Footer from "../../components/Footer/footer"
 
 
 class Post extends Component {
@@ -87,7 +89,7 @@ class Post extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="Text">Blog Post</Label>
-                <Input
+                <TinyEditor
 
                   className="formText"
                   type="textarea"
@@ -101,13 +103,15 @@ class Post extends Component {
               <FormGroup>
                 <Label for="File">File</Label>
                 <Input
-                  type="textarea"
+                  type="file"
                   name="file"
                   id="File"
                   onChange={this.handleInputChange}
                   value={this.state.file}
                   placeholder="Enter your blog post here!"
+                  
                 />
+
               </FormGroup>
               {/* <FormGroup>
                 <Label for="File">File</Label>
@@ -123,6 +127,8 @@ class Post extends Component {
 
               <Button onClick={this.handleFormSubmit}>Submit</Button>
             </Form>
+            {/* <MyEditor /> */}
+              {/* <Footer /> */}
           </Jumbotron>
         </div>
       </div>
