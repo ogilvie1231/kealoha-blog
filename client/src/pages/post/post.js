@@ -24,6 +24,14 @@ class Post extends Component {
     });
   };
 
+  handleEditorChange = (content, editor) => {
+    console.log('Content was updated:', content);
+    this.setState({
+      text: content,
+    });
+  };
+
+
   handleFormSubmit = (event) => {
     event.preventDefault();
     const { category, title, text, file, subject } = this.state;
@@ -95,9 +103,10 @@ class Post extends Component {
                   type="textarea"
                   name="text"
                   id="Text"
-                  onChange={this.handleInputChange}
+                  onEditorChange={this.handleEditorChange}
+                  // onChange={this.handleInputChange}
                   value={this.state.text}
-                  placeholder="Enter your blog post here!"
+                 
                 />
               </FormGroup>
               <FormGroup>
@@ -113,18 +122,6 @@ class Post extends Component {
                 />
 
               </FormGroup>
-              {/* <FormGroup>
-                <Label for="File">File</Label>
-                <Input
-                  type="file"
-                  name="file"
-                  id="File"
-                  onChange={this.handleInputChange}
-                  value={this.state.file}
-                  placeholder="Enter your blog post here!"
-                />
-              </FormGroup> */}
-
               <Button onClick={this.handleFormSubmit}>Submit</Button>
             </Form>
             {/* <MyEditor /> */}
