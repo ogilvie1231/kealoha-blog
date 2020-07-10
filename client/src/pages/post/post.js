@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, Jumbotron } from "reactstrap";
 import "../post/post.css";
 import API from "../../utils/API";
-import TinyEditor from '../../components/TinyEditor/TinyEditor'
-import GetQuote from "../../components/Quote/Quote"
-import Footer from "../../components/Footer/footer"
-
+import { Editor } from '@tinymce/tinymce-react';
+import TinyEditor from "../../components/TinyEditor/TinyEditor";
+import GetQuote from "../../components/Quote/Quote";
+import Footer from "../../components/Footer/footer";
 
 class Post extends Component {
   state = {
@@ -23,14 +23,6 @@ class Post extends Component {
       [name]: value,
     });
   };
-
-  handleEditorChange = (content, editor) => {
-    console.log('Content was updated:', content);
-    this.setState({
-      text: content,
-    });
-  };
-
 
   handleFormSubmit = (event) => {
     event.preventDefault();
@@ -50,9 +42,16 @@ class Post extends Component {
       });
   };
 
+  handleEditorChange = (content, editor) => {
+    console.log("Content was updated:", content);
+    const name = event.target.name;
+    this.setState({
+      [name]: content,
+    });
+  };
+
   render() {
     return (
-      
       <div>
         <div className="container">
           <Jumbotron className="postForm">
@@ -89,7 +88,7 @@ class Post extends Component {
                 <Input
                   type="textarea"
                   name="subject"
-                  id="Text"
+                  id="Subject"
                   onChange={this.handleInputChange}
                   value={this.state.subject}
                   placeholder="Brief subject line"
@@ -97,17 +96,40 @@ class Post extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="Text">Blog Post</Label>
-                <TinyEditor
+                <Editor
+                  apiKey="8d246zj3u78olcgquvf970rexzq4uxsqmzix6sroocmks5c6"
+                  initialValue="<p>This is the initial content of the editor</p>"
+                  name="text"
+                  id="Text"
+                  init={{
+                    height: 500,
+                    menubar: false,
+                    plugins: [
+                      "advlist autolink lists link image charmap print preview anchor",
+                      "searchreplace visualblocks code fullscreen",
+                      "insertdatetime media table paste code help wordcount",
+                    ],
+                    toolbar:
+                      "undo redo | formatselect | bold italic backcolor | \
+                       alignleft aligncenter alignright alignjustify | \
+                       bullist numlist outdent indent | removeformat | help",
+                  }}
+                  // onEditorChange={this.handleEditorChange}
+                  onChange={this.handleInputChange}
+                  value={this.state.text}
+                />
+                
+                {/* <TinyEditor
 
                   className="formText"
                   type="textarea"
                   name="text"
                   id="Text"
-                  onEditorChange={this.handleEditorChange}
-                  // onChange={this.handleInputChange}
+                  onChange={this.handleInputChange}
                   value={this.state.text}
+                  
                  
-                />
+                /> */}
               </FormGroup>
               <FormGroup>
                 <Label for="File">File</Label>
@@ -118,14 +140,24 @@ class Post extends Component {
                   onChange={this.handleInputChange}
                   value={this.state.file}
                   placeholder="Enter your blog post here!"
-                  
                 />
-
               </FormGroup>
+              {/* <FormGroup>
+                <Label for="File">File</Label>
+                <Input
+                  type="file"
+                  name="file"
+                  id="File"
+                  onChange={this.handleInputChange}
+                  value={this.state.file}
+                  placeholder="Enter your blog post here!"
+                />
+              </FormGroup> */}
+
               <Button onClick={this.handleFormSubmit}>Submit</Button>
             </Form>
             {/* <MyEditor /> */}
-              {/* <Footer /> */}
+            {/* <Footer /> */}
           </Jumbotron>
         </div>
       </div>

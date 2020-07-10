@@ -2,9 +2,10 @@ import React from 'react';
  import { Editor } from '@tinymce/tinymce-react';
 
  class TinyEditor extends React.Component {
-//    handleEditorChange = (content, editor) => {
-//      console.log('Content was updated:', content);
-//    }
+     
+   handleEditorChange = (content, editor) => {
+     console.log('Content was updated:', content);
+   }
 
    render() {
      return (
@@ -24,7 +25,7 @@ import React from 'react';
              alignleft aligncenter alignright alignjustify | \
              bullist numlist outdent indent | removeformat | help'
          }}
-        //  onEditorChange={this.handleEditorChange}
+         onEditorChange={this.handleEditorChange}
        />
      );
    }
